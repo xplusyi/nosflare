@@ -31,3 +31,23 @@ enabled = false
 [[migrations]]
 tag = "v4"
 new_sqlite_classes = ["RelayWebSocket"]
+
+
+# --- 在文件末尾添加以下内容 ---
+
+[vars]
+# 1. 设置 Relay 的基本信息
+RELAY_INFO_NAME = "My Nosflare Relay"
+RELAY_INFO_DESCRIPTION = "A public Nostr relay on Cloudflare Workers"
+RELAY_INFO_PUBKEY = "你的_HEX_公钥" 
+RELAY_INFO_CONTACT = "mailto:your-email@example.com"
+
+# 2. 【关键】关闭收费模式
+# 将入场费设置为空数组，表示免费
+RELAY_INFO_FEES_ADMISSION = "[]"
+RELAY_INFO_FEES_PUBLICATION = "[]"
+
+# 3. 关闭白名单/强制验证 (让所有人都能连)
+# 确保没有开启 NIP-42 强制验证
+NIP_42_REQUIRED = "false"
+# 如果有白名单变量，通常设为空或 false (不同版本变量名不同，先试上面这些)
