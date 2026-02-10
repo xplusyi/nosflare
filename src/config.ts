@@ -12,7 +12,7 @@ export const PAY_TO_RELAY_ENABLED = false; // Set to false to disable pay to rel
 export const RELAY_ACCESS_PRICE_SATS = 2121; // Price in SATS for relay access
 
 // NIP-42 Authentication
-export const AUTH_REQUIRED = true; // Set to false to disable NIP-42 authentication requirement
+export const AUTH_REQUIRED = false; // Set to false to disable NIP-42 authentication requirement
 export const AUTH_TIMEOUT_MS = 600000; // 10 minutes - how long the challenge is valid
 
 // Relay info
